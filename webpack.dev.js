@@ -1,35 +1,33 @@
 const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/js/index.js",
+    index: "./src/js/index.js"
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
   },
   plugins: [
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "./src/index.html",
       inject: true,
-      // chuncks: [index],
+      chunks: ["index"],
       filename: "index.html",
-    }),
+    })
   ],
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
-    // filename: "[name].bundle.css",
-    // path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
-  devtool: "inline-source-map",
-  devServer: {
-    static: path.resolve(__dirname, "dist"),
-    port: 1234,
-  },
-  modules: {
+  module: {
     rules: [
       {
-        test: /\.s(a|c)ss$/i,
-        use: ["style-loader", "css-loader", "scss-loader"],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -40,13 +38,21 @@ module.exports = {
         type: "asset/resource",
       },
       {
-        test: /\.js$/i,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-env"],
+        },
       },
       {
         test: /\.html$/i,
         loader: "html-loader",
+      },
+      {
+        test: /\.(glsl|vs|fs|vert|frag)$/,
+        exclude: /node_modules/,
+        use: ["raw-loader", "glslify-loader"],
       },
     ],
   },
