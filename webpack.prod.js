@@ -12,10 +12,7 @@ module.exports = {
   // This option controls if and how source maps are generated
   devtool: "source-map",
   entry: {
-    index: "./src/javascript/index.js",
-    case: "./src/javascript/case.js",
-    about: "./src/javascript/about.js",
-    contact: "./src/javascript/contact.js",
+    index: "./src/javascript/index.js"
   },
   output: {
     filename: "[name].[hash:20].js",
@@ -29,24 +26,6 @@ module.exports = {
       inject: "body",
       chunks: ["index"],
       filename: "index.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/case.html",
-      inject: "body",
-      chunks: ["case"],
-      filename: "case.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/about.html",
-      inject: "body",
-      chunks: ["about"],
-      filename: "about.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/contact.html",
-      inject: "body",
-      chunks: ["contact"],
-      filename: "contact.html",
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
