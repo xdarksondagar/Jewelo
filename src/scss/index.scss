@@ -1,14 +1,4 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: aqua;
-}
-h1 {
-  font-size: 4rem;
-  color: red;
-}
+@import "base";
+@import "variable";
+@import "nav";
+@import "hero";

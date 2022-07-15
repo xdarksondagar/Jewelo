@@ -5,11 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewelo</title>
+    <title>Jewello</title>
+    <link rel="stylesheet" href="../node_modules/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <h1>Jewelo</h1>
+    <!-- navigation start -->
+    <header>
+        <!-- NAV START -->
+        <nav>
+            <div class="container">
+                <div class="nav__hamburger">
+                    <div class="hamburger"></div>
+                </div>
+                <img src="./assets/logo.webp" alt="logo" class="logo">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">Home</a></li>
+                    <li class="nav__item"><a href="#">Shop</a></li>
+                    <li class="nav__item"><a href="#">Featured</a></li>
+                    <li class="nav__item"><a href="#">Blogs</a></li>
+                    <li class="nav__item"><a href="#">Page</a></li>
+                </ul>
+                <ul class="nav__icon-list">
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-search.svg" alt="search"></a>
+                    </li>
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-person.svg" alt="person"></a>
+                    </li>
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-heart.svg" alt="like"></a>
+                    </li>
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-bag.svg" alt="bag"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- NAV END -->
+    </header>
+    <!-- navigation end -->
+
+    <!-- page wrapper start -->
+    <div class="wrapper" id="wrapper" data-wrapper="home">
+        <!-- scroll container (content container) start -->
+        <div class="scroll__container" id="scroll__container" data-aria-label="scroll element">
+            <!-- content start -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <sapn class="hero__subtitle">Jewelry By Category</sapn>
+                        <h1 class="hero__title">Diamond Jewelry</h1>
+                        <p class="hero__text">
+                            From brilliant moissanites to our colorful array of sapphires, pair a setting
+                            witha sparkling gemstone of your choice.
+                        </p>
+                        <button class="hero__btn"><a href="#">Shop Now</a></button>
+                    </div>
+                </div>
+            </section>
+            <!-- content end -->
+        </div>
+        <!-- scroll container (content container) end -->
+    </div>
+    <!-- page wrapper end -->
+
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

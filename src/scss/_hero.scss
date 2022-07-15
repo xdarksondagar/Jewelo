@@ -1,0 +1,49 @@
+.hero {
+  height: 100vh;
+  background-image: url(../assets/banner.webp);
+  background-size: cover;
+  background-position: right;
+
+  & .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+    max-width: 40%;
+    margin-left: 10%;
+  }
+  &__subtitle {
+    color: $color-black;
+    letter-spacing: 2px;
+  }
+  &__title {
+    margin: 1.5rem 0;
+    font-size: 5.5rem;
+    color: $color-black;
+  }
+  &__text {
+    color: $color-gray-4;
+  }
+  &__btn {
+    background-color: $color-turqouise;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: 4rem;
+
+    &:hover {
+      background-color: $color-pink;
+    }
+
+    & a {
+      color: $color-white;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}
