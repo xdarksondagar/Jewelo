@@ -27,6 +27,30 @@ a,
 button {
   outline: 0;
 }
+
+.btn {
+  background-color: $color-turqouise;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 4rem;
+  display: block;
+
+  &:hover {
+    background-color: $color-pink;
+  }
+
+  & a {
+    color: $color-white;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -35,6 +59,7 @@ button {
 .flex-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .position_center {
   position: absolute;

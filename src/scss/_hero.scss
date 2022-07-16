@@ -25,25 +25,4 @@
   &__text {
     color: $color-gray-4;
   }
-  &__btn {
-    background-color: $color-turqouise;
-    border: none;
-    padding: 1em 2em;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    margin-top: 4rem;
-
-    &:hover {
-      background-color: $color-pink;
-    }
-
-    & a {
-      color: $color-white;
-      font-weight: 600;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-  }
 }

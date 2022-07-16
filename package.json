@@ -38,6 +38,7 @@
     "sass-loader": "^13.0.2",
     "scss-loader": "^0.0.1",
     "style-loader": "^3.3.1",
+    "swiper": "^8.3.1",
     "terser-webpack-plugin": "^5.3.3",
     "ukiyojs": "^3.0.2",
     "webpack": "^5.73.0",

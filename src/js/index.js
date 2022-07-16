@@ -1,3 +1,9 @@
+// import Swiper bundle with all modules installed
+import Swiper from "swiper";
+
+// import styles bundle
+import "swiper/css";
+
 // import Hamburger from "./hamb.js";
 import LocomotiveScroll from "locomotive-scroll";
 
@@ -23,4 +29,11 @@ navLink.forEach((el) => {
 const scroll = new LocomotiveScroll({
   el: document.querySelector("#wrapper"),
   smooth: true
+});
+
+// init Swiper:
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  slidesPerView: 3,
+  spaceBetween: 30
 });
