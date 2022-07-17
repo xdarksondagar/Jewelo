@@ -5,11 +5,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewelo</title>
+    <title>Jewello</title>
+    <link rel="stylesheet" href="../node_modules/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <h1>Jewelo</h1>
+    <!-- navigation start -->
+    <header>
+        <!-- NAV START -->
+        <nav>
+            <div class="container">
+                <div class="nav__hamburger">
+                    <div class="hamburger"></div>
+                </div>
+                <img src="./assets/logo.webp" alt="logo" class="logo">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">Home</a></li>
+                    <li class="nav__item"><a href="#">Shop</a></li>
+                    <li class="nav__item"><a href="#">Featured</a></li>
+                    <li class="nav__item"><a href="#">Blogs</a></li>
+                    <li class="nav__item"><a href="#">Page</a></li>
+                </ul>
+                <ul class="nav__icon-list">
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-search.svg" alt="search"></a>
+                    </li>
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-person.svg" alt="person"></a>
+                    </li>
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-heart.svg" alt="like"></a>
+                    </li>
+                    <li class="nav__icon-item">
+                        <a href="#"><img src="./assets/icon-bag.svg" alt="bag"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- NAV END -->
+    </header>
+    <!-- navigation end -->
+
+    <!-- page wrapper start -->
+    <div class="wrapper" id="wrapper" data-wrapper="home">
+        <!-- scroll container (content container) start -->
+        <div class="scroll__container" id="scroll__container" data-aria-label="scroll element">
+            <!-- content start -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__content">
+                        <sapn class="hero__subtitle">Jewelry By Category</sapn>
+                        <h1 class="hero__title">Diamond Jewelry</h1>
+                        <p class="hero__text">
+                            From brilliant moissanites to our colorful array of sapphires, pair a setting
+                            witha sparkling gemstone of your choice.
+                        </p>
+                        <button class="btn hero__btn"><a href="#">Shop Now</a></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer">
+                <div class="container flex-column">
+                    <h2 class="offer__heading">Get 20% Off</h2>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="offer__card flex-column">
+                                    <picture class="offer__pic">
+                                        <img src="./assets/offer_1.jpeg" alt="">
+                                    </picture>
+                                    <div class="offer__intro">
+                                        <p>Diamond studs</p>
+                                        <h3 class="name">Men&rsquo;s Jewelry</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="offer__card flex-column">
+                                    <picture class="offer__pic">
+                                        <img src="./assets/offer_2.jpeg" alt="">
+                                    </picture>
+                                    <div class="offer__intro">
+                                        <p>Diamond studs</p>
+                                        <h3 class="name">Luxury Jewelry</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="offer__card flex-column">
+                                    <picture class="offer__pic">
+                                        <img src="./assets/offer_3.jpeg" alt="">
+                                    </picture>
+                                    <div class="offer__intro">
+                                        <p>Diamond studs</p>
+                                        <h3 class="name">Fashion Rings</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn offer__btn"><a href="#">Shop Now</a></button>
+                </div>
+            </section>
+
+            <section class="design">
+                <div class="container flex-center">
+                    <img src="./assets/design-1.jpeg" alt="" class="design__img-1">
+                    <div class="design__content">
+                        <sapn class="design__subtitle">MADE JUST FOR YOU</sapn>
+                        <h1 class="design__title">Jewelo Degsin</h1>
+                        <p class="design__text">
+                            Timeless and evolving, unlimited in expression, we build spaces around the lives we lead.
+                            Using furnishings and objects of good design, that respect a space's purpose, creates
+                            environments that are beautiful and livable-the ones we love best. Handcrafted furniture,
+                            artisanal rugs, wallpaper, classic vases, and lighting ccessories—well-made and carefully
+                            considered—whether.
+                        </p>
+                        <button class="btn design__btn"><a href="#">Shop Now</a></button>
+                    </div>
+                    <img src="./assets/design-2.jpeg" alt="" class="design__img-2">
+                </div>
+            </section>
+            <!-- content end -->
+        </div>
+        <!-- scroll container (content container) end -->
+    </div>
+    <!-- page wrapper end -->
+
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

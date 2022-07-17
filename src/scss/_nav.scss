@@ -1,0 +1,108 @@
+header {
+  box-shadow: 0px 0px 5px 0px rgba($color-black, 0.8);
+}
+.logo {
+  width: 14rem;
+  max-width: 100%;
+  position: relative;
+  z-index: 15;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  z-index: 10;
+  height: 10vh;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  & .nav__list {
+    width: 47rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+
+    & .nav__item a {
+      font-weight: 500;
+      text-transform: uppercase;
+      position: relative;
+      color: $color-gray-2; //
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        height: 2px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -5px;
+        background-color: currentColor;
+        transform: scale(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+      &:hover::after,
+      &:focus::after {
+        transform: scale(1);
+        transform-origin: left;
+      }
+      &:hover,
+      &:focus {
+        color: $color-turqouise;
+      }
+    }
+  }
+  & .nav__hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+
+    & div,
+    & div:after,
+    & div::before {
+      width: 30px;
+      height: 3px;
+      background-color: $color-gray-3;
+      border-radius: 2px;
+      transition: all 0.5s ease-in-out;
+    }
+    & div {
+      width: 18px;
+    }
+    & div::before {
+      width: 25px;
+    }
+    & div:after,
+    & div::before {
+      content: "";
+      display: block;
+    }
+    & div:after {
+      transform: translateY(-11px);
+    }
+    & div::before {
+      transform: translateY(8px);
+    }
+  }
+
+  & .nav__icon-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  & .nav__icon-item a img {
+    max-width: 2.5rem;
+    aspect-ratio: 1;
+  }
+}
