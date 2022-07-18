@@ -1,0 +1,150 @@
+.seller {
+  padding-top: 6rem;
+
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    color: $color-gray-3;
+  }
+  &__subtitle {
+    display: block;
+    text-align: center;
+    color: $color-gray-4;
+    font-weight: 500;
+    padding: 2rem 0;
+  }
+  &__gallery {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  &__gallery-item {
+    width: 23%;
+    padding-bottom: 8rem;
+  }
+  &__gallery-picture {
+    overflow-x: hidden;
+    position: relative;
+
+    &:hover .seller__gallery-shutter {
+      transform: translateX(0);
+    }
+  }
+  &__gallery-new-tag {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    color: $color-white;
+    background-color: $color-blue;
+    padding: 0rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 25px;
+    cursor: default;
+  }
+  &__gallery-img {
+    max-width: 100%;
+  }
+  &__gallery-text {
+    height: fit-content;
+    padding: 1rem 0;
+  }
+  &__gallery-review {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #999;
+    justify-content: start;
+
+    & .star {
+      gap: 2px;
+      margin-right: 2rem;
+
+      & img {
+        width: 15px;
+      }
+    }
+  }
+  &__gallery-name {
+    padding: 0.5em 0;
+    & a {
+      color: $color-gray-1;
+      font-weight: 500;
+      transition: color 0.25s ease;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-turqouise;
+      }
+    }
+  }
+
+  &__gallery-cost {
+    color: $color-turqouise;
+    font-weight: 600;
+    & del {
+      color: #979797;
+    }
+  }
+
+  &__gallery-shutter {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    gap: 1.25rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+
+    & picture {
+      margin-right: 1rem;
+      width: 5rem;
+      height: 5rem;
+      background-color: $color-white;
+      padding: 1.5rem;
+      border-radius: 50%;
+      box-shadow: 0px 2px 2px 0px rgba($color-black, 0.2);
+      position: relative;
+
+      & img {
+        max-width: 100%;
+      }
+      & .tooltip {
+        font-size: 1.2rem;
+        visibility: hidden;
+        background-color: $color-black;
+        color: $color-white;
+        white-space: nowrap;
+        text-align: center;
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        z-index: 1;
+        top: -60%;
+        left: -75%;
+      }
+      &:hover {
+        background-color: $color-turqouise;
+
+        & .tooltip {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.sale-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  clip-path: polygon(0% 70%, 22% 20%, 78% 20%, 100% 70%);
+  padding: 1rem 5rem;
+  background-color: $color-red-1;
+  color: $color-white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transform: rotate(45deg) translate(2.5rem, -1.5rem);
+  & span {
+    display: block;
+    padding: 0.8rem 0 1.2rem;
+  }
+}
