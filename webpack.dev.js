@@ -1,14 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const dirApp = path.resolve(__dirname, "src/js");
-const dirStyles = path.resolve(__dirname, "src/scss");
+// const dirAssets = path.resolve(__dirname, "src/assets");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "development",
   entry: {
-    app: path.resolve(dirApp, "index.js"),
-    styles: path.resolve(dirStyles, "index.scss")
+    app: "./src/js/index.js",
+    styles: "./src/scss/index.scss"
   },
   devtool: "inline-source-map",
   devServer: {
@@ -63,7 +62,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: "asset/resource"
       },
       {
