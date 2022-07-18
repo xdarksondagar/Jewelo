@@ -35,5 +35,5 @@ const scroll = new LocomotiveScroll({
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   slidesPerView: 3,
-  spaceBetween: 30
+  spaceBetween: 60
 });
