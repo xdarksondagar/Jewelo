@@ -94,3 +94,12 @@ h4 {
   width: 100%;
   height: fit-content;
 }
+
+.star {
+  gap: 2px;
+  margin-right: 2rem;
+
+  & img {
+    width: 15px;
+  }
+}
