@@ -22,35 +22,39 @@
     }
   }
   &__new-collection {
-    background-image: url(../assets/seller-offer-1.webp);
+    background-image: url(../assets/seller-offer-1.png);
   }
   &__weekly-offer {
-    background-image: url(../assets/seller-offer-2.webp);
+    background-image: url(../assets/seller-offer-2.png);
   }
   // bottom showcase
   .banner__bottom {
-    justify-content: space-between;
-    background-color: red;
+    padding: 5rem 0;
+    gap: 3rem;
     & .col {
       align-items: start;
-      gap: 1rem;
-      background-color: aqua;
-      &__item {
-        background-color: orangered;
-        justify-content: flex-start;
-        gap: 2rem;
-        & picture {
-          position: relative;
-          width: 30%;
-        }
-        & img {
-          max-width: 100%;
-          width: 20rem;
-        }
-        & .slae-tag {
-        }
+      gap: 3rem;
+
+      &__title {
+        color: $color-gray-1;
+        font-size: 2.8rem;
       }
-      .star {
+      &__item {
+        justify-content: start;
+        & picture {
+          max-width: 40%;
+          overflow: hidden;
+          position: relative;
+        }
+        & .col__img {
+          display: block;
+          max-width: 100%;
+          object-fit: cover;
+        }
+        & .sale-tag {
+          transform-origin: center;
+          transform: scale(0.6) translate(55%, -20%) rotate(45deg);
+        }
       }
     }
   }
