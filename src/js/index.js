@@ -36,7 +36,9 @@ const swiperInsta = new Swiper(".insta__swiper", {
   spaceBetween: 30,
   centeredSlides: true,
   autoplay: {
-    delay: 3000
+    disableOnInteraction: false,
+    delay: 1000,
+    pauseOnMouseEnter: true
   },
 
   // Navigation arrows
