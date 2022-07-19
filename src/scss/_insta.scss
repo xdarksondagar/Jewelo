@@ -1,0 +1,30 @@
+.insta {
+  padding: 10rem 0;
+  &__heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    color: $color-gray-1;
+  }
+  &__hashtag {
+    display: block;
+    text-align: center;
+    font-size: 2.4rem;
+    color: $color-turqouise;
+    margin-bottom: 3rem;
+  }
+
+  &__slide {
+    height: 25rem;
+    overflow: hidden;
+    &:hover .insta__pic {
+      transform: scale(1.1);
+    }
+  }
+  &__pic {
+    object-fit: cover;
+    width: 100%;
+    transition: transform 1.5s ease;
+    transform-origin: center;
+  }
+}

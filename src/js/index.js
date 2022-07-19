@@ -29,6 +29,29 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 60
 });
 
+const swiperInsta = new Swiper(".insta__swiper", {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }
+});
+
+const swiper2 = new Swiper(".swiper-2", {
+  // Optional parameters
+  slidesPerView: 3,
+  spaceBetween: 30
+});
+
 class smoothScroll {
   constructor(element) {
     this.element = element;
