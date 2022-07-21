@@ -46,6 +46,26 @@
       transform: translateY(2rem);
     }
   }
+  &__contacts {
+    gap: 3rem;
+    justify-content: start;
+    & svg {
+      --size: 2rem;
+      width: var(--size);
+      height: var(--size);
+      & .icon,
+      & .icon-stroke {
+        transition: all 0.2s ease;
+      }
+
+      &:hover .icon {
+        fill: $color-turqouise;
+      }
+      &:hover .icon-stroke {
+        stroke: $color-turqouise;
+      }
+    }
+  }
   &__list {
     list-style: none;
     gap: 1rem;

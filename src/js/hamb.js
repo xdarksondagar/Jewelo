@@ -1,24 +1,22 @@
 export default class Hamburger {
-  constuctor(hamburger, nav_link, nav_list) {
+  constuctor(hamburger, nav, body, close) {
     this.hamburger = hamburger;
-    this.nav_list = nav_list;
-    this.nav_link = nav_link;
+    this.nav = nav;
+    this.body = body;
+    this.close = close;
     this.events();
   }
 
   addClasses() {
-    this.nav_list.classList.toggle("nav__list--active");
-    this.hamburger.classList.toggle("nav--hamburger--active");
-    console.log("click");
+    this.nav.classList.add("nav-side--active");
+    this.body.classList.add("body-side");
   }
-
+  rmClasses() {
+    this.nav.classList.add("nav-side--active");
+    this.body.classList.add("body-side");
+  }
   events() {
     this.hamburger.addEventListener("click", this.addClasses.bind(this));
-    this.nav_link.forEach((el) => {
-      el.addEventListener("click", () => {
-        this.nav_list.classList.toggle("nav__list--active");
-        this.hamburger.classList.toggle("nav--hamburger--active");
-      });
-    });
+    this.close.addEventListener("click", this.rmClasses.bind(this));
   }
 }
