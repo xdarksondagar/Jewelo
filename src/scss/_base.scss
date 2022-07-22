@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Marcellus&display=swap");
-// font-family: 'Marcellus', serif;
 
 *,
 *::after,
@@ -93,4 +92,38 @@ h4 {
   left: 0;
   width: 100%;
   height: fit-content;
+}
+
+.star {
+  gap: 2px;
+  margin-right: 2rem;
+
+  & img {
+    width: 15px;
+  }
+}
+
+.toTop {
+  position: fixed;
+  background: $color-white;
+  bottom: 5vh;
+  right: 5vw;
+  width: 6rem;
+  height: 6rem;
+  z-index: 3;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  & img {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background: $color-turqouise;
+    & img {
+      transform: scale(1.3);
+    }
+  }
 }

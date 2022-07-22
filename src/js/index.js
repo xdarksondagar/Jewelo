@@ -1,26 +1,23 @@
+import Hamburger from "./hamb";
+import smoothScroll from "./scroll";
+
+// nav logic
+const hamburger = document.querySelector("#nav__hamburger");
+const nav = document.querySelector(".nav-side");
+const body = document.querySelector("body");
+const close = document.querySelector(".close-btn");
+
+const nav_bar = new Hamburger(hamburger, nav, body, close);
+
+// scroll
+const scroll__container = document.querySelector(".scroll__container");
+const scrolling = new smoothScroll(scroll__container);
+
+// slide
+
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import "swiper/css";
-
-// import styles bundle
-import LocomotiveScroll from "locomotive-scroll";
-
-const hamburger = document.querySelector(".nav__hamburger");
-const nav_list = document.querySelector(".nav__list");
-const navLink = document.querySelectorAll(".nav__list a");
-// new Hamburger(hamburger, nav_list, navLink);
-
-hamburger.addEventListener("click", () => {
-  nav_list.classList.toggle("nav__list--active");
-  hamburger.classList.toggle("nav--hamburger--active");
-});
-
-navLink.forEach((el) => {
-  el.addEventListener("click", () => {
-    nav_list.classList.toggle("nav__list--active");
-    hamburger.classList.toggle("nav--hamburger--active");
-  });
-});
 
 // init Swiper:
 const swiper = new Swiper(".swiper", {
@@ -29,38 +26,36 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 60
 });
 
-class smoothScroll {
-  constructor(element) {
-    this.element = element;
-    this.scroll = null;
-    this.createScroll();
-    this.events();
-  }
+const swiperInsta = new Swiper(".insta__swiper", {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    disableOnInteraction: false,
+    delay: 1000,
+    pauseOnMouseEnter: true
+  },
 
-  createScroll() {
-    this.scroll = new LocomotiveScroll({
-      el: this.element,
-      smooth: true,
-      getDirection: true
-    });
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
   }
+});
 
-  events() {
-    window.addEventListener("resize", this.update.bind(this));
-  }
+const swiper2 = new Swiper(".swiper-2", {
+  // Optional parameters
+  slidesPerView: 3,
+  spaceBetween: 30
+});
 
-  update() {
-    this.scroll.update();
-  }
-
-  destroy() {
-    this.scroll.destroy();
-  }
-
-  pause() {
-    this.scroll.pause();
-  }
-}
-
-const scroll__container = document.querySelector(".scroll__container");
-const scrolling = new smoothScroll(scroll__container);
+// const top = document.querySelector(".toTop");
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 100) {
+//     top.style.display = "block";
+//   } else if (window.scrollY < 100) {
+//     top.style.display = "none";
+//   }
+// });

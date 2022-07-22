@@ -6,12 +6,13 @@
     & > div {
       flex-grow: 1;
       padding: 4rem;
-      height: 70vh;
+      height: 40rem;
       min-height: fit-content;
       flex-direction: column;
       align-items: flex-start;
       background-position: left;
       background-size: 100%;
+      background-repeat: no-repeat;
       transition: background-size 0.5s ease;
 
       &:hover {
@@ -21,10 +22,40 @@
     }
   }
   &__new-collection {
-    background-image: url(../assets/seller-offer-1.webp);
+    background-image: url(../assets/seller-offer-1.png);
   }
   &__weekly-offer {
-    background-image: url(../assets/seller-offer-2.webp);
+    background-image: url(../assets/seller-offer-2.png);
   }
   // bottom showcase
+  .banner__bottom {
+    padding: 5rem 0;
+    gap: 3rem;
+    & .col {
+      align-items: start;
+      gap: 3rem;
+
+      &__title {
+        color: $color-gray-1;
+        font-size: 2.8rem;
+      }
+      &__item {
+        justify-content: start;
+        & picture {
+          max-width: 40%;
+          overflow: hidden;
+          position: relative;
+        }
+        & .col__img {
+          display: block;
+          max-width: 100%;
+          object-fit: cover;
+        }
+        & .sale-tag {
+          transform-origin: center;
+          transform: scale(0.6) translate(55%, -20%) rotate(45deg);
+        }
+      }
+    }
+  }
 }

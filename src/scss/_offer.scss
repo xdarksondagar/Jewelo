@@ -18,7 +18,9 @@
   &__pic img {
     display: block;
     object-fit: cover;
-    max-height: 70vh;
+    min-height: 30rem;
+    height: 70vh;
+    max-height: 50rem;
     transition: transform 1s ease;
     transform-origin: center;
   }
@@ -57,6 +59,7 @@
     }
   }
 }
-.swiper {
+.swiper,
+.swiper-2 {
   width: 100%;
 }
