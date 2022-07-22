@@ -5,6 +5,7 @@
   &__top {
     justify-content: stretch;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding-bottom: 5rem;
     position: relative;
 
@@ -25,6 +26,23 @@
       font-size: 1.4rem;
       margin: 1em 0;
     }
+    @include media(45em) {
+      padding-bottom: 3rem;
+      &:first-of-type {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+    @include media(31.25em) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
   &__logo {
     max-width: 100%;
@@ -44,6 +62,10 @@
       height: 1px;
       background-color: $color-gray-1;
       transform: translateY(2rem);
+
+      @include media(31.25em) {
+        margin: 0 auto;
+      }
     }
   }
   &__contacts {
@@ -70,6 +92,9 @@
     list-style: none;
     gap: 1rem;
     align-items: start;
+    @include media(31.25em) {
+      align-items: center;
+    }
   }
   &__item a {
     text-decoration: none;
@@ -84,6 +109,11 @@
     padding: 2rem 0;
     justify-content: space-between;
     color: $color-gray-1;
+
+    @include media(45em) {
+      flex-direction: column;
+      gap: 2rem;
+    }
     & p a {
       color: $color-gray-4;
       text-decoration: none;

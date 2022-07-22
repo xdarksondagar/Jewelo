@@ -15,15 +15,22 @@
   }
   &__gallery {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 2rem;
   }
   &__gallery-item {
     width: 23%;
     padding-bottom: 8rem;
+
+    @include media(56.5em) {
+      width: 30%;
+    }
+    @include media(31.25em) {
+      width: 48%;
+    }
   }
   &__gallery-picture {
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 
     &:hover .seller__gallery-shutter {
@@ -44,6 +51,7 @@
   }
   &__gallery-img {
     max-width: 100%;
+    min-height: 30vh;
   }
   &__gallery-text {
     height: fit-content;

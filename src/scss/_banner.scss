@@ -2,7 +2,13 @@
   // top banners
   &__top {
     justify-content: space-between;
+    align-items: stretch;
     gap: 4rem;
+
+    @include media(45em) {
+      flex-direction: column;
+    }
+
     & > div {
       flex-grow: 1;
       padding: 4rem;
@@ -14,6 +20,17 @@
       background-size: 100%;
       background-repeat: no-repeat;
       transition: background-size 0.5s ease;
+
+      @include media(45em) {
+        width: 100%;
+        max-width: 600px;
+        height: 70vh;
+        margin: 0 auto;
+      }
+      @include media(31.25em) {
+        height: fit-content;
+        aspect-ratio: 96/66;
+      }
 
       &:hover {
         background-size: 104%;
@@ -31,6 +48,10 @@
   .banner__bottom {
     padding: 5rem 0;
     gap: 3rem;
+
+    @include media(45em) {
+      flex-direction: column;
+    }
     & .col {
       align-items: start;
       gap: 3rem;
@@ -41,8 +62,13 @@
       }
       &__item {
         justify-content: start;
+        @include media(45em) {
+          gap: 2rem;
+        }
+
         & picture {
           max-width: 40%;
+          min-height: 25vh;
           overflow: hidden;
           position: relative;
         }

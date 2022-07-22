@@ -12,11 +12,24 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;
+
+  @include media(56.5em) {
+    font-size: 50%;
+  }
+  @include media(45em) {
+    font-size: 44.5%;
+  }
+  @include media(31.25em) {
+    font-size: 40%;
+  }
 }
 body {
   font-family: "Jost", sans-serif;
   overflow-x: hidden;
   font-size: 1.6rem;
+  @include media(45em) {
+    font-size: 1.8rem;
+  }
 }
 .container {
   width: min(calc(100% - 4rem), 1300px);
