@@ -14,8 +14,11 @@
     margin-bottom: 3rem;
   }
 
+  &__swiper {
+    position: relative;
+  }
   &__slide {
-    height: 24rem;
+    max-height: fit-content;
     overflow: hidden;
     position: relative;
 
@@ -56,8 +59,48 @@
   }
   &__pic {
     object-fit: cover;
-    height: 100%;
+    width: 100%;
+    min-height: 20rem;
+    display: block;
     transition: transform 1.5s ease;
     transform-origin: center;
   }
+}
+
+.insta__swiper:hover .swiper-button-prev,
+.insta__swiper:hover .swiper-button-next {
+  opacity: 1;
+  transform: translateX(0);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.swiper-button-next {
+  transform: translateX(-150%);
+}
+.swiper-button-prev {
+  transform: translateX(150%);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #3e9f8e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 1.5rem 1.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+  background-color: #3e9f8e;
+  color: white;
 }

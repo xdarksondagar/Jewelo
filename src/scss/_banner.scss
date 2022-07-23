@@ -62,9 +62,7 @@
       }
       &__item {
         justify-content: start;
-        @include media(45em) {
-          gap: 2rem;
-        }
+        gap: 2rem;
 
         & picture {
           max-width: 40%;
