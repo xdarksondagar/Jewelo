@@ -35,6 +35,10 @@ body {
   width: min(calc(100% - 4rem), 1300px);
   margin-inline: auto;
 }
+.c-scrollbar_thumb {
+  z-index: 99;
+}
+
 a,
 button {
   outline: 0;

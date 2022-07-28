@@ -1,6 +1,11 @@
 import Hamburger from "./hamb";
 import smoothScroll from "./scroll";
 import TextAni from "./textAni";
+
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
+import "swiper/css";
+
 // nav logic
 const hamburger = document.querySelector("#nav__hamburger");
 const nav = document.querySelector(".nav-side");
@@ -10,17 +15,16 @@ const close = document.querySelector(".close-btn");
 const nav_bar = new Hamburger(hamburger, nav, body, close);
 
 // scroll
+const toTop = document.querySelector(".toTop");
 const scroll__container = document.querySelector(".scroll__container");
 const scrolling = new smoothScroll(scroll__container);
+toTop.addEventListener("click", () => {
+  scrolling.scroll.scrollTo(".hero", 0);
+});
 
 // text animation
 const textAnimation = new TextAni();
-
 // slide
-
-import Swiper from "swiper/bundle";
-import "swiper/css/bundle";
-import "swiper/css";
 
 // init Swiper:
 const swiper = new Swiper(".swiper", {
@@ -109,15 +113,3 @@ const swiper2 = new Swiper(".swiper-2", {
     }
   }
 });
-
-// aos animation
-AOS.init();
-
-// const top = document.querySelector(".toTop");
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 100) {
-//     top.style.display = "block";
-//   } else if (window.scrollY < 100) {
-//     top.style.display = "none";
-//   }
-// });
