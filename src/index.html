@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jewello</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 </head>
 
@@ -23,7 +22,7 @@
                     <span>Menu</span>
                 </div>
                 <div class="login flex-center">
-                    <img src="./assets/icon-person.svg" alt="">
+                    <img src="./assets/icon-person.svg" alt="logo">
                     <span>Login</span>
                 </div>
             </div>
@@ -49,16 +48,16 @@
                     <img src="./assets/arrow.svg" alt=">">
                 </li>
             </ul>
-            <div class="close-btn">
+            <button class="close-btn">
                 <span>close</span>
-            </div>
+            </button>
         </nav>
         <nav>
             <div class="container">
-                <div class="nav__hamburger" id="nav__hamburger">
+                <div class="nav__hamburger">
                     <div class="hamburger"></div>
                 </div>
-                <img src="./assets/logo.png" alt="logo" class="logo">
+                <a href="#hero" id="logo"><img src="./assets/logo.png" alt="logo" class="logo"></a>
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#">Home</a></li>
                     <li class="nav__item"><a href="#">Shop</a></li>
@@ -1003,15 +1002,15 @@
             </footer>
 
             <!-- FOOTER END -->
-            <!-- TO-TOP BUTTON -->
-            <a href="#hero" class="toTop flex-center">
-                <img src=" ./assets/icon-up.svg" alt="to top">
-            </a>
-
 
             <!-- content end -->
         </div>
         <!-- scroll container (content container) end -->
+        <!-- TO-TOP BUTTON -->
+        <a href="#hero" data-scroll data-scroll-sticky class="toTop flex-center">
+            <img src=" ./assets/icon-up.svg" alt="to top">
+        </a>
+
     </div>
     <!-- page wrapper end -->
 </body>

@@ -7,7 +7,7 @@ import "swiper/css/bundle";
 import "swiper/css";
 
 // nav logic
-const hamburger = document.querySelector("#nav__hamburger");
+const hamburger = document.querySelector(".nav__hamburger");
 const nav = document.querySelector(".nav-side");
 const body = document.querySelector("body");
 const close = document.querySelector(".close-btn");
@@ -15,10 +15,14 @@ const close = document.querySelector(".close-btn");
 const nav_bar = new Hamburger(hamburger, nav, body, close);
 
 // scroll
+const logo = document.querySelector("#logo");
 const toTop = document.querySelector(".toTop");
 const scroll__container = document.querySelector(".scroll__container");
 const scrolling = new smoothScroll(scroll__container);
 toTop.addEventListener("click", () => {
+  scrolling.scroll.scrollTo(".hero", 0);
+});
+logo.addEventListener("click", () => {
   scrolling.scroll.scrollTo(".hero", 0);
 });
 
