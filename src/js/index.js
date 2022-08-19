@@ -1,4 +1,3 @@
-import Hamburger from "./hamb";
 import smoothScroll from "./scroll";
 import TextAni from "./textAni";
 
@@ -7,12 +6,23 @@ import "swiper/css/bundle";
 import "swiper/css";
 
 // nav logic
-const hamburger = document.querySelector(".nav__hamburger");
+const hamburger = document.querySelector("#nav__hamburger");
 const nav = document.querySelector(".nav-side");
 const body = document.querySelector("body");
-const close = document.querySelector(".close-btn");
+const close = document.querySelector("#close");
 
-const nav_bar = new Hamburger(hamburger, nav, body, close);
+function addClass() {
+  nav.classList.add("nav-side--active");
+  body.classList.add("body-side");
+}
+
+function rmClass() {
+  nav.classList.remove("nav-side--active");
+  body.classList.remove("body-side");
+}
+
+hamburger.addEventListener("click", () => addClass());
+close.addEventListener("click", () => rmClass());
 
 // scroll
 const logo = document.querySelector("#logo");
