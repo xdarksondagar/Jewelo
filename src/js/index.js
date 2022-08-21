@@ -4,6 +4,7 @@ import TextAni from "./textAni";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import "swiper/css";
+import "../scss/index.scss";
 
 // nav logic
 const hamburger = document.querySelector("#nav__hamburger");
