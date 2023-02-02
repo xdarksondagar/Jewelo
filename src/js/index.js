@@ -1,3 +1,4 @@
+import "textify.js/dist/Textify.min.css";
 import TextAni from "./textAni";
 import Lenis from "@studio-freight/lenis";
 
@@ -58,7 +59,7 @@ close.addEventListener("click", () => rmClass());
 // });
 
 // text animation
-// const textAnimation = new TextAni();
+const textAnimation = new TextAni();
 // slide
 
 // init Swiper:
