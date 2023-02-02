@@ -8,10 +8,16 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100%;
+  height: auto;
+  scroll-behavior: auto;
+}
+
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
+  // scroll-padding-top: 10rem;
 
   @include media(56.5em) {
     font-size: 50%;

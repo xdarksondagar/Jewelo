@@ -1,10 +1,30 @@
-import smoothScroll from "./scroll";
 import TextAni from "./textAni";
+import Lenis from "@studio-freight/lenis";
 
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import "swiper/css";
 import "../scss/index.scss";
+
+// SMOOTH SCROLL BEHAVIOUR
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smooth: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    lenis.scrollTo(this.getAttribute("href"));
+  });
+});
 
 // nav logic
 const hamburger = document.querySelector("#nav__hamburger");
@@ -26,19 +46,19 @@ hamburger.addEventListener("click", () => addClass());
 close.addEventListener("click", () => rmClass());
 
 // scroll
-const logo = document.querySelector("#logo");
-const toTop = document.querySelector(".toTop");
-const scroll__container = document.querySelector(".scroll__container");
-const scrolling = new smoothScroll(scroll__container);
-toTop.addEventListener("click", () => {
-  scrolling.scroll.scrollTo(".hero", 0);
-});
-logo.addEventListener("click", () => {
-  scrolling.scroll.scrollTo(".hero", 0);
-});
+// const logo = document.querySelector("#logo");
+// const toTop = document.querySelector(".toTop");
+// const scroll__container = document.querySelector(".scroll__container");
+// const scrolling = new smoothScroll(scroll__container);
+// toTop.addEventListener("click", () => {
+//   scrolling.scroll.scrollTo(".hero", 0);
+// });
+// logo.addEventListener("click", () => {
+//   scrolling.scroll.scrollTo(".hero", 0);
+// });
 
 // text animation
-const textAnimation = new TextAni();
+// const textAnimation = new TextAni();
 // slide
 
 // init Swiper:
