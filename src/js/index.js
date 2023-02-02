@@ -27,6 +27,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+const logo = document.querySelector("#logo");
+
+logo.addEventListener("click", () => {
+  lenis.scrollTo(".hero", 0);
+});
+
 // nav logic
 const hamburger = document.querySelector("#nav__hamburger");
 const nav = document.querySelector(".nav-side");
@@ -45,18 +51,6 @@ function rmClass() {
 
 hamburger.addEventListener("click", () => addClass());
 close.addEventListener("click", () => rmClass());
-
-// scroll
-// const logo = document.querySelector("#logo");
-// const toTop = document.querySelector(".toTop");
-// const scroll__container = document.querySelector(".scroll__container");
-// const scrolling = new smoothScroll(scroll__container);
-// toTop.addEventListener("click", () => {
-//   scrolling.scroll.scrollTo(".hero", 0);
-// });
-// logo.addEventListener("click", () => {
-//   scrolling.scroll.scrollTo(".hero", 0);
-// });
 
 // text animation
 const textAnimation = new TextAni();
